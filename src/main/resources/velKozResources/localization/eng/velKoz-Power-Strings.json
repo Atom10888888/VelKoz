@@ -1,0 +1,27 @@
+{
+"velKoz:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"velKoz:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"velKoz:DeconstructionPower": {
+        "NAME": "Deconstruction",
+        "DESCRIPTIONS": [
+                "When stacked to 3, explodes and deals damage equal to the stack amount of \"Void Insight\"."
+        ]
+},
+"velKoz:VoidInsightPower": {
+        "NAME": "Void Insight",
+        "DESCRIPTIONS": [
+                "Whenever you deal damage with a non-Basic Attack card, apply #b",
+                " stack of Deconstruction to the target.",
+                " stacks of Deconstruction to the target.",
+                " After reaching #b",
+                " stacks, clear all of them and deal #b",
+                " damage."
+        ]
+}
+}

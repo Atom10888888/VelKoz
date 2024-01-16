@@ -1,0 +1,81 @@
+{
+  "velKoz:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "velKoz:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL velkoz:Multiword_Keyword."
+  },
+  "velKoz:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! velkoz:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! velkoz:Keywords."
+  },
+  "velKoz:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "velKoz:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "velKoz:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X velkoz:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 velkoz:Keywords."
+  },
+  "velKoz:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "velKoz:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "velKoz:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "velKoz:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !velKoz:ENERGY_DAMAGE! damage total.)"
+  },
+  "velKoz:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !velKoz:SecondMagic! poison to an enemy."
+  },
+  "velKoz:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "velKoz:Strike_Grey": {
+    "NAME": "Strike_Grey",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "velKoz:Defend_Grey": {
+    "NAME": "Defend_Grey",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "velKoz:VoidBeam": {
+    "NAME": "Void Beam",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage and apply !M! Weak to ALL enemies."
+  },
+  "velKoz:VoidRift": {
+    "NAME": "Void Rift",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice."
+  },
+  "velKoz:Take2": {
+    "NAME": "Take 2",
+    "DESCRIPTION": "2"
+  },
+  "velKoz:Take3": {
+    "NAME": "Take 3",
+    "DESCRIPTION": "3"
+  },
+  "velKoz:Take4": {
+    "NAME": "Take 4",
+    "DESCRIPTION": "4"
+  }
+}
