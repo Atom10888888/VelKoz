@@ -3,11 +3,11 @@ package velKoz.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 import velKoz.util.TextureLoader;
 
-import static velKoz.VelKoz.makeRelicOutlinePath;
-import static velKoz.VelKoz.makeRelicPath;
+import static velKoz.VelKozMod.makeRelicOutlinePath;
+import static velKoz.VelKozMod.makeRelicPath;
 
 public class PlaceholderRelic extends CustomRelic {
 
@@ -18,7 +18,7 @@ public class PlaceholderRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = VelKoz.makeID("PlaceholderRelic");
+    public static final String ID = VelKozMod.makeID("PlaceholderRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));

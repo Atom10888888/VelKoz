@@ -4,9 +4,9 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeSkillCardPath;
+import static velKoz.VelKozMod.makeSkillCardPath;
 
 public class DefaultCommonSkill extends AbstractDynamicCard {
 
@@ -19,7 +19,7 @@ public class DefaultCommonSkill extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = VelKoz.makeID(DefaultCommonSkill.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(DefaultCommonSkill.class.getSimpleName());
     public static final String IMG = makeSkillCardPath("Skill.png");
 
     // /TEXT DECLARATION/

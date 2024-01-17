@@ -13,14 +13,14 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeEventPath;
+import static velKoz.VelKozMod.makeEventPath;
 
 public class IdentityCrisisEvent extends AbstractImageEvent {
 
 
-    public static final String ID = VelKoz.makeID("IdentityCrisisEvent");
+    public static final String ID = VelKozMod.makeID("IdentityCrisisEvent");
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
 
     private static final String NAME = eventStrings.NAME;

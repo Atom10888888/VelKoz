@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeSkillCardPath;
+import static velKoz.VelKozMod.makeSkillCardPath;
 
 public class DefaultUncommonSkill extends AbstractDynamicCard {
 
@@ -19,7 +19,7 @@ public class DefaultUncommonSkill extends AbstractDynamicCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = VelKoz.makeID(DefaultUncommonSkill.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(DefaultUncommonSkill.class.getSimpleName());
     public static final String IMG = makeSkillCardPath("Skill.png");
 
     // /TEXT DECLARATION/

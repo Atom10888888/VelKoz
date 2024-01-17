@@ -12,18 +12,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 import velKoz.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static velKoz.VelKoz.makePowerPath;
+import static velKoz.VelKozMod.makePowerPath;
 
 public class DeconstructionPower extends AbstractPower implements CloneablePowerInterface {
-    public static final Logger logger = LogManager.getLogger(VelKoz.class.getName());
+    public static final Logger logger = LogManager.getLogger(VelKozMod.class.getName());
     public AbstractCreature source;
 
-    public static final String POWER_ID = VelKoz.makeID("DeconstructionPower");
+    public static final String POWER_ID = VelKozMod.makeID("DeconstructionPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

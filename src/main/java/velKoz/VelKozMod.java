@@ -67,7 +67,7 @@ import java.util.Properties;
  */
 
 @SpireInitializer
-public class VelKoz implements
+public class VelKozMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
@@ -76,7 +76,7 @@ public class VelKoz implements
         PostInitializeSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
-    public static final Logger logger = LogManager.getLogger(VelKoz.class.getName());
+    public static final Logger logger = LogManager.getLogger(VelKozMod.class.getName());
     private static String modID;
 
     // Mod-settings settings. This is if you want an on/off savable button
@@ -121,8 +121,8 @@ public class VelKoz implements
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "velKozResources/images/1024/card_default_gray_orb.png";
     
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "velKozResources/images/charSelect/DefaultCharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "velKozResources/images/charSelect/DefaultCharacterPortraitBG.png";
+    private static final String THE_DEFAULT_BUTTON = "velKozResources/images/charSelect/VelKozButton.png";
+    private static final String THE_DEFAULT_PORTRAIT = "velKozResources/images/charSelect/VelKozPortraitBG.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "velKozResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "velKozResources/images/char/defaultCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "velKozResources/images/char/defaultCharacter/corpse.png";
@@ -175,7 +175,7 @@ public class VelKoz implements
     
     // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
     
-    public VelKoz() {
+    public VelKozMod() {
         logger.info("Subscribe to BaseMod hooks");
         
         BaseMod.subscribe(this);
@@ -243,7 +243,7 @@ public class VelKoz implements
     public static void setModID(String ID) { // DON'T EDIT
         Gson coolG = new Gson(); // EY DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i hate u Gdx.files
-        InputStream in = VelKoz.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THIS ETHER
+        InputStream in = VelKozMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THIS ETHER
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class); // OR THIS, DON'T EDIT IT
         logger.info("You are attempting to set your mod ID as: " + ID); // NO WHY
         if (ID.equals(EXCEPTION_STRINGS.DEFAULTID)) { // DO *NOT* CHANGE THIS ESPECIALLY, TO EDIT YOUR MOD ID, SCROLL UP JUST A LITTLE, IT'S JUST ABOVE
@@ -263,9 +263,9 @@ public class VelKoz implements
     private static void pathCheck() { // ALSO NO
         Gson coolG = new Gson(); // NOPE DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i still hate u btw Gdx.files
-        InputStream in = VelKoz.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THISSSSS
+        InputStream in = VelKozMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THISSSSS
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class); // NAH, NO EDIT
-        String packageName = VelKoz.class.getPackage().getName(); // STILL NO EDIT ZONE
+        String packageName = VelKozMod.class.getPackage().getName(); // STILL NO EDIT ZONE
         FileHandle resourcePathExists = Gdx.files.internal(getModID() + "Resources"); // PLEASE DON'T EDIT THINGS HERE, THANKS
         if (!modID.equals(EXCEPTION_STRINGS.DEVID)) { // LEAVE THIS EDIT-LESS
             if (!packageName.equals(getModID())) { // NOT HERE ETHER
@@ -282,7 +282,7 @@ public class VelKoz implements
     
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
-        VelKoz defaultmod = new VelKoz();
+        VelKozMod defaultmod = new VelKozMod();
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
     

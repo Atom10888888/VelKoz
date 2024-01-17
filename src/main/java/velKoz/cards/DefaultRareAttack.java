@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeAttackCardPath;
+import static velKoz.VelKozMod.makeAttackCardPath;
 
 public class DefaultRareAttack extends AbstractDynamicCard {
 
@@ -23,7 +23,7 @@ public class DefaultRareAttack extends AbstractDynamicCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = VelKoz.makeID(DefaultRareAttack.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(DefaultRareAttack.class.getSimpleName());
     public static final String IMG = makeAttackCardPath("Attack.png");
 
     // /TEXT DECLARATION/

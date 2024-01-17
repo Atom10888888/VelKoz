@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeSkillCardPath;
+import static velKoz.VelKozMod.makeSkillCardPath;
 
 public class DefaultRareSkill extends AbstractDynamicCard {
 
@@ -21,7 +21,7 @@ public class DefaultRareSkill extends AbstractDynamicCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = VelKoz.makeID(DefaultRareSkill.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(DefaultRareSkill.class.getSimpleName());
     public static final String IMG = makeSkillCardPath("Skill.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

@@ -5,10 +5,10 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 import velKoz.powers.RarePower;
 
-import static velKoz.VelKoz.makePowerCardPath;
+import static velKoz.VelKozMod.makePowerCardPath;
 
 public class DefaultRarePower extends AbstractDynamicCard {
 
@@ -20,7 +20,7 @@ public class DefaultRarePower extends AbstractDynamicCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = VelKoz.makeID(DefaultRarePower.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(DefaultRarePower.class.getSimpleName());
     public static final String IMG = makePowerCardPath("Power.png");
 
     // /TEXT DECLARATION/

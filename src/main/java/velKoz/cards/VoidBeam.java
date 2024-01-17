@@ -8,15 +8,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeAttackCardPath;
+import static velKoz.VelKozMod.makeAttackCardPath;
 
 public class VoidBeam extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = VelKoz.makeID(VoidBeam.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(VoidBeam.class.getSimpleName());
     public static final String IMG = makeAttackCardPath("Attack.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 

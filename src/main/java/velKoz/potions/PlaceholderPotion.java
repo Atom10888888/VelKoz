@@ -12,11 +12,11 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.abstracts.CustomPotion;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
 public class PlaceholderPotion extends CustomPotion {
 
-    public static final String POTION_ID = VelKoz.makeID("PlaceholderPotion");
+    public static final String POTION_ID = VelKozMod.makeID("PlaceholderPotion");
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     
     public static final String NAME = potionStrings.NAME;

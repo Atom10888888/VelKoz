@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 import velKoz.util.TextureLoader;
 
-import static velKoz.VelKoz.makeRelicOutlinePath;
-import static velKoz.VelKoz.makeRelicPath;
+import static velKoz.VelKozMod.makeRelicOutlinePath;
+import static velKoz.VelKozMod.makeRelicPath;
 
 public class DefaultClickableRelic extends CustomRelic implements ClickableRelic { // You must implement things you want to use from StSlib
     /*
@@ -26,7 +26,7 @@ public class DefaultClickableRelic extends CustomRelic implements ClickableRelic
      */
 
     // ID, images, text.
-    public static final String ID = VelKoz.makeID("DefaultClickableRelic");
+    public static final String ID = VelKozMod.makeID("DefaultClickableRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("default_clickable_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("default_clickable_relic.png"));

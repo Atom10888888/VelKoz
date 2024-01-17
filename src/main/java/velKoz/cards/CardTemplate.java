@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeAttackCardPath;
+import static velKoz.VelKozMod.makeAttackCardPath;
 
 // public class ${NAME} extends AbstractDynamicCard
 @AutoAdd.Ignore // Remove this line when you make a template.
@@ -18,7 +18,7 @@ public class CardTemplate extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     // public static final String ID = DefaultMod.makeID(${NAME}.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
-    public static final String ID = VelKoz.makeID("DefaultCommonAttack"); // DELETE THIS ONE.
+    public static final String ID = VelKozMod.makeID("DefaultCommonAttack"); // DELETE THIS ONE.
     public static final String IMG = makeAttackCardPath("Attack.png");// "public static final String IMG = makeCardPath("${NAME}.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 

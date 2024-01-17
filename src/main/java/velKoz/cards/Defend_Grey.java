@@ -4,15 +4,15 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeSkillCardPath;
+import static velKoz.VelKozMod.makeSkillCardPath;
 
 public class Defend_Grey extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = VelKoz.makeID(Defend_Grey.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(Defend_Grey.class.getSimpleName());
     public static final String IMG = makeSkillCardPath("Defend_Grey.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 

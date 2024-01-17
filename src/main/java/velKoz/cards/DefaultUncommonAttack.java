@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeAttackCardPath;
+import static velKoz.VelKozMod.makeAttackCardPath;
 
 public class DefaultUncommonAttack extends AbstractDynamicCard {
 
@@ -20,7 +20,7 @@ public class DefaultUncommonAttack extends AbstractDynamicCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = VelKoz.makeID(DefaultUncommonAttack.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(DefaultUncommonAttack.class.getSimpleName());
     public static final String IMG = makeAttackCardPath("Attack.png");
 
     // /TEXT DECLARATION/

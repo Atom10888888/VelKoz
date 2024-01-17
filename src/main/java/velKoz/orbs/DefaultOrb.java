@@ -20,14 +20,14 @@ import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 
 import basemod.abstracts.CustomOrb;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 
-import static velKoz.VelKoz.makeOrbPath;
+import static velKoz.VelKozMod.makeOrbPath;
 
 public class DefaultOrb extends CustomOrb {
 
     // Standard ID/Description
-    public static final String ORB_ID = VelKoz.makeID("DefaultOrb");
+    public static final String ORB_ID = VelKozMod.makeID("DefaultOrb");
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
 

@@ -4,7 +4,7 @@ import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import velKoz.cards.AbstractDefaultCard;
 
-import static velKoz.VelKoz.makeID;
+import static velKoz.VelKozMod.makeID;
 
 public class DefaultSecondMagicNumber extends DynamicVariable {
 

@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import velKoz.VelKoz;
+import velKoz.VelKozMod;
 import velKoz.powers.DeconstructionPower;
 import velKoz.powers.VoidInsightPower;
 import velKoz.util.TextureLoader;
 
-import static velKoz.VelKoz.makeRelicOutlinePath;
-import static velKoz.VelKoz.makeRelicPath;
+import static velKoz.VelKozMod.makeRelicOutlinePath;
+import static velKoz.VelKozMod.makeRelicPath;
 
 public class PlaceholderRelic2 extends CustomRelic {
     /*
@@ -22,7 +22,7 @@ public class PlaceholderRelic2 extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = VelKoz.makeID("PlaceholderRelic2");
+    public static final String ID = VelKozMod.makeID("PlaceholderRelic2");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
