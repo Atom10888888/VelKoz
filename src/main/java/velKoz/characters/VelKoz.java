@@ -23,9 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import velKoz.VelKozMod;
 import velKoz.cards.*;
-import velKoz.relics.DefaultClickableRelic;
-import velKoz.relics.PlaceholderRelic;
-import velKoz.relics.PlaceholderRelic2;
+import velKoz.relics.VoidInsightRelic;
 
 import java.util.ArrayList;
 
@@ -172,15 +170,13 @@ public class VelKoz extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
+        retVal.add(VoidInsightRelic.ID);
+
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        UnlockTracker.markRelicAsSeen(VoidInsightRelic.ID);
+
 
         return retVal;
     }

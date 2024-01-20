@@ -18,12 +18,13 @@
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
   },
   {
-    "PROPER_NAME": "Void Insight",
+    "PROPER_NAME": "Organic Deconstruction",
     "NAMES": [
-      "Void Insight",
-      "void_insight",
-      "void_insights"
+      "Organic Deconstruction",
+      "Organic Deconstructions",
+      "organic_deconstruction",
+      "organic_deconstructions"
     ],
-    "DESCRIPTION": "Whenever you deal damage with a non-Basic Attack card, apply 1 stack of Deconstruction to the target. After reaching 3 stacks, clear all of them and deal damage equal to the stack amount of the power."
+    "DESCRIPTION": "Whenever you apply an attack, apply 1 stack of Deconstruction to the target. After reaching 3 stacks, clear all of them and deal damage equal to the stack amount of the power."
   }
 ]

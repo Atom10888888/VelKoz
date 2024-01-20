@@ -24,9 +24,7 @@ import velKoz.cards.*;
 import velKoz.events.IdentityCrisisEvent;
 import velKoz.potions.PlaceholderPotion;
 import velKoz.relics.BottledPlaceholderRelic;
-import velKoz.relics.DefaultClickableRelic;
-import velKoz.relics.PlaceholderRelic;
-import velKoz.relics.PlaceholderRelic2;
+import velKoz.relics.VoidInsightRelic;
 import velKoz.util.IDCheckDontTouchPls;
 import velKoz.util.TextureLoader;
 import velKoz.variables.DefaultCustomVariable;
@@ -399,12 +397,13 @@ public class VelKozMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), velKoz.characters.VelKoz.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), velKoz.characters.VelKoz.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), velKoz.characters.VelKoz.Enums.COLOR_GRAY);
+        BaseMod.addRelic(new VoidInsightRelic(), RelicType.SHARED);
+//        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), velKoz.characters.VelKoz.Enums.COLOR_GRAY);
+//        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), velKoz.characters.VelKoz.Enums.COLOR_GRAY);
+//        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), velKoz.characters.VelKoz.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+//        BaseMod.addRelic(new TheEyeOfTheVoidRelic(), RelicType.SHARED);
         
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game

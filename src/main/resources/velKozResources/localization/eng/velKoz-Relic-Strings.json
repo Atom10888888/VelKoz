@@ -6,11 +6,11 @@
       "Gain #b1 [E] ."
     ]
   },
-  "velKoz:PlaceholderRelic2": {
-    "NAME": "The Eye of the Void",
+  "velKoz:VoidInsight": {
+    "NAME": "Void Insight",
     "FLAVOR": "Knowledge through... disintegration.",
     "DESCRIPTIONS": [
-      "Gain \"Void Insight\"."
+      "Gain the power of Organic Deconstruction."
     ]
   },
   "velKoz:DefaultClickableRelic": {

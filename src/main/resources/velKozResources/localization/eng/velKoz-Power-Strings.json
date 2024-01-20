@@ -10,11 +10,11 @@
 "velKoz:DeconstructionPower": {
         "NAME": "Deconstruction",
         "DESCRIPTIONS": [
-                "When stacked to 3, explodes and deals damage equal to the stack amount of \"Void Insight\"."
+                "When stacked to 3, explodes and deals damage equal to the stack amount of Organic Deconstruction."
         ]
 },
-"velKoz:VoidInsightPower": {
-        "NAME": "Void Insight",
+"velKoz:OrganicDeconstructionPower": {
+        "NAME": "Organic Deconstruction",
         "DESCRIPTIONS": [
                 "Whenever you deal damage with a non-Basic Attack card, apply #b",
                 " stack of Deconstruction to the target.",

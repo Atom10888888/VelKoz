@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import velKoz.VelKozMod;
 import velKoz.powers.DeconstructionPower;
-import velKoz.powers.VoidInsightPower;
+import velKoz.powers.OrganicDeconstructionPower;
 import velKoz.util.TextureLoader;
 
 import static velKoz.VelKozMod.makeRelicOutlinePath;
 import static velKoz.VelKozMod.makeRelicPath;
 
-public class PlaceholderRelic2 extends CustomRelic {
+public class VoidInsightRelic extends CustomRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
@@ -22,12 +22,12 @@ public class PlaceholderRelic2 extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = VelKozMod.makeID("PlaceholderRelic2");
+    public static final String ID = VelKozMod.makeID("VoidInsight");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("void_insight_relic.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("void_insight_relic.png"));
 
-    public PlaceholderRelic2() {
+    public VoidInsightRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
     }
 
@@ -40,7 +40,7 @@ public class PlaceholderRelic2 extends CustomRelic {
                 new ApplyPowerAction(
                         AbstractDungeon.player, // 应用能力的对象，这里是玩家
                         AbstractDungeon.player, // 能力的来源，也是玩家
-                        new VoidInsightPower(AbstractDungeon.player, AbstractDungeon.player, 15, 1, 3), // 创建一个新的能力实例
+                        new OrganicDeconstructionPower(AbstractDungeon.player, AbstractDungeon.player, 15, 1, 3), // 创建一个新的能力实例
                         15 // 要添加的能力层数
                 )
         );
