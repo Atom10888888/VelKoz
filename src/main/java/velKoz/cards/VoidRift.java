@@ -30,9 +30,11 @@ public class VoidRift extends AbstractDynamicCard {
     public static final CardColor COLOR = velKoz.characters.VelKoz.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
+
+    private static final int UPGRADED_DAMAGE = 3;
 
     // /STAT DECLARATION/
 
@@ -41,6 +43,7 @@ public class VoidRift extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         isMultiDamage = true;
+        isEthereal = true;
     }
 
     @Override
@@ -58,6 +61,7 @@ public class VoidRift extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
+            upgradeDamage(UPGRADED_DAMAGE);
             initializeDescription();
         }
     }

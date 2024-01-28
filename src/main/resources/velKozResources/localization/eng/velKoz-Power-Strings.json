@@ -1,27 +1,40 @@
 {
-"velKoz:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"velKoz:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-},
-"velKoz:DeconstructionPower": {
-        "NAME": "Deconstruction",
-        "DESCRIPTIONS": [
-                "When stacked to 3, explodes and deals damage equal to the stack amount of Organic Deconstruction."
-        ]
-},
-"velKoz:OrganicDeconstructionPower": {
-        "NAME": "Organic Deconstruction",
-        "DESCRIPTIONS": [
-                "Whenever you deal damage with a non-Basic Attack card, apply #b",
-                " stack of Deconstruction to the target.",
-                " stacks of Deconstruction to the target.",
-                " After reaching #b",
-                " stacks, clear all of them and deal #b",
-                " damage."
-        ]
-}
+        "velKoz:CommonPower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+        },
+        "velKoz:RarePower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+        },
+        "velKoz:DeconstructionPower": {
+                "NAME": "Deconstruction",
+                "DESCRIPTIONS": [
+                        "When reaching the stack limit, explodes and deals damage."
+                ]
+        },
+        "velKoz:OrganicDeconstructionPower": {
+                "NAME": "Organic Deconstruction",
+                "DESCRIPTIONS": [
+                        "Whenever you deal damage with a non-Basic Attack card, apply #b",
+                        " stack of Deconstruction to the target.",
+                        " stacks of Deconstruction to the target.",
+                        " After reaching #b",
+                        " stacks, clear all of them and deal #b",
+                        " damage."
+                ]
+        },
+        "velKoz:AnatomicalMasteryPower": {
+                "NAME": "Anatomical Mastery",
+                "DESCRIPTIONS": [
+                        "Organic Deconstruction explodes when stacking to 2."
+                ]
+        },
+        "velKoz:DualDeconstructionPower": {
+                "NAME": "Dual Deconstruction",
+                "DESCRIPTIONS": [
+                        "Each time you attack, apply 2 stacks of Deconstruction."
+                ]
+
+        }
 }

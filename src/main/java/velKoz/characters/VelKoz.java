@@ -58,11 +58,11 @@ public class VelKoz extends CustomPlayer {
 
     // =============== BASE STATS =================
 
-    public static final int ENERGY_PER_TURN = 3;
+    public static final int ENERGY_PER_TURN = 20;
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 5;
+    public static final int CARD_DRAW = 10;
     public static final int ORB_SLOTS = 3;
 
     // =============== /BASE STATS/ =================
@@ -154,14 +154,17 @@ public class VelKoz extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(Strike_Grey.ID);
-        retVal.add(Strike_Grey.ID);
-        retVal.add(Take2.ID);
-        retVal.add(Take2.ID);
-        retVal.add(Take3.ID);
-        retVal.add(Take3.ID);
-        retVal.add(Take4.ID);
-        retVal.add(Take4.ID);
+        retVal.add(EnergyExtract.ID);
+        retVal.add(EnergyExtract.ID);
+        retVal.add(VoidRift.ID);
+        retVal.add(VoidRift.ID);
+        retVal.add(ZhenDangLianJi.ID);
+        retVal.add(ZhenDangLianJi.ID);
+        retVal.add(XuNengBaoPo.ID);
+        retVal.add(XuNengBaoPo.ID);
+        retVal.add(AnatomicalMastery.ID);
+        retVal.add(DualDeconstrucion.ID);
+
 
         return retVal;
     }

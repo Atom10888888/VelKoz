@@ -10,7 +10,7 @@
     "NAME": "Void Insight",
     "FLAVOR": "Knowledge through... disintegration.",
     "DESCRIPTIONS": [
-      "Gain the power of Organic Deconstruction."
+      "Gain 15 OrganicDeconstruction."
     ]
   },
   "velKoz:DefaultClickableRelic": {

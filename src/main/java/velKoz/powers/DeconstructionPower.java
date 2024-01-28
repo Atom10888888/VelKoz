@@ -57,33 +57,37 @@ public class DeconstructionPower extends AbstractPower implements CloneablePower
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        logger.info("attacked");
-        // 检查攻击来源是否是玩家
+        AbstractPlayer p = AbstractDungeon.player;
         if (info.owner != null && info.owner.isPlayer && info.type == DamageInfo.DamageType.NORMAL) {
-            addStack(AbstractDungeon.player);
+            for (AbstractPower power : p.powers){
+                if (power instanceof OrganicDeconstructionPower){
+                    OrganicDeconstructionPower organicDeconstructionPower = (OrganicDeconstructionPower)power;
+                    int stacksToAdd = organicDeconstructionPower.getStacksToAdd();
+                    int stacksLimit = organicDeconstructionPower.getStacksLimit();
+                    int explodeDamage = organicDeconstructionPower.amount;
+                    for (int i = 0; i < stacksToAdd; i++) {
+                        addStack(stacksLimit,explodeDamage,p);
+                    }
+                }
+            }
         }
         return damageAmount;
     }
 
     // 这个方法用于增加 Deconstruction 层数
-    public void addStack(AbstractPlayer p) {
-        for (AbstractPower power : p.powers){
-            if (power instanceof OrganicDeconstructionPower){
-                OrganicDeconstructionPower voidInsightPower = (OrganicDeconstructionPower)power;
-                int stacksToAdd = voidInsightPower.stacksToAdd;
-                int stacksLimit = voidInsightPower.stacksLimit;
-                int explodeDamage = voidInsightPower.amount;
-                this.amount+=stacksToAdd;
-
-                if(this.amount % 3 == 0){
-                    this.amount -= stacksLimit;
-                    this.flash();
-                    AbstractDungeon.actionManager.addToBottom(
-                            new DamageAction(this.owner, new DamageInfo(p, explodeDamage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.FIRE)
-                    );
-                }
-            }
+    public void addStack(int stacksLimit, int explodeDamage, AbstractPlayer p) {
+        this.amount += 1;
+        if(this.amount % stacksLimit == 0){
+            this.amount -= stacksLimit;
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(this.owner, new DamageInfo(p, explodeDamage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.FIRE)
+            );
         }
+    }
+
+    public int getAmount(){
+        return this.amount;
     }
 
 

@@ -2,19 +2,25 @@ package velKoz.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import velKoz.powers.DeconstructionPower;
+import velKoz.powers.OrganicDeconstructionPower;
+import velKoz.powers.DualDeconstuctionPower;
 import velKoz.VelKozMod;
+import velKoz.util.PowerHandler;
 
 import static velKoz.VelKozMod.makeAttackCardPath;
 
-public class Take4 extends AbstractDynamicCard {
+public class XuNengBaoPo extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = VelKozMod.makeID(Take4.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(XuNengBaoPo.class.getSimpleName());
     public static final String IMG = makeAttackCardPath("Attack.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
@@ -29,32 +35,39 @@ public class Take4 extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = velKoz.characters.VelKoz.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 2;
+    private static final int DAMAGE = 14;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
-    private static final int DAMAGE = 1;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int BLOCK = 14;
+    private static final int UPGRADED_PLUS_BLOCK = 4;
 
     // /STAT DECLARATION/
 
 
-    public Take4() {
+    public XuNengBaoPo() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseBlock = BLOCK;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractPower deconstructionPower = PowerHandler.findPower(m, DeconstructionPower.class);
+        AbstractPower organicDeconstructionPower = PowerHandler.findPower(p, OrganicDeconstructionPower.class);
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        if(deconstructionPower != null && organicDeconstructionPower != null ){
+            int deconstructionAmount = ((DeconstructionPower) deconstructionPower).getAmount();
+            int stacksToAdd = ((OrganicDeconstructionPower)organicDeconstructionPower).getStacksToAdd();
+            int stacksLimit = ((OrganicDeconstructionPower)organicDeconstructionPower).getStacksLimit();
+            if (deconstructionAmount + stacksToAdd >= stacksLimit){
+                AbstractDungeon.actionManager.addToBottom(
+                        new GainBlockAction(p,p,block));
+            }
+        }
     }
 
 
@@ -64,7 +77,7 @@ public class Take4 extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeBlock(UPGRADED_PLUS_BLOCK);
             initializeDescription();
         }
     }

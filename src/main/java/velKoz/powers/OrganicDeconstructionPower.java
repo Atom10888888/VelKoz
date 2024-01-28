@@ -21,8 +21,8 @@ public class OrganicDeconstructionPower extends AbstractPower implements Cloneab
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public int stacksToAdd;
-    public int stacksLimit;
+    private int stacksToAdd;
+    private int stacksLimit;
 
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
@@ -59,6 +59,29 @@ public class OrganicDeconstructionPower extends AbstractPower implements Cloneab
             description = DESCRIPTIONS[0] + stacksToAdd + DESCRIPTIONS[2] + DESCRIPTIONS[3] + stacksLimit + DESCRIPTIONS[4] + amount + DESCRIPTIONS[5];
         }
     }
+
+    public int getStacksLimit(){
+        return this.stacksLimit;
+    }
+
+    public int getStacksToAdd(){
+        return this.stacksToAdd;
+    }
+
+    public void onAnatomicalMasteryPowerApplied(){
+        this.stacksLimit = 2;
+    }
+
+    public void onDualDeconstrucionPowerApplied(){
+        this.stacksToAdd = 2;
+    }
+
+    @Override
+    public void atEndOfRound(){
+        this.stacksLimit = 3;
+        this.stacksToAdd = 1;
+    }
+
 
     @Override
     public AbstractPower makeCopy() {

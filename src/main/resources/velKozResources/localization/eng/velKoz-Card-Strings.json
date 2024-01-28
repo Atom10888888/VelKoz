@@ -58,24 +58,29 @@
     "NAME": "Defend_Grey",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "velKoz:VoidBeam": {
-    "NAME": "Void Beam",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage and apply !M! Weak to ALL enemies."
-  },
   "velKoz:VoidRift": {
     "NAME": "Void Rift",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies twice."
   },
-  "velKoz:Take2": {
-    "NAME": "Take 2",
-    "DESCRIPTION": "2"
+  "velKoz:EnergyExtract": {
+    "NAME": "Energy Extract",
+    "DESCRIPTION": "Draw cards equal to the target's current Deconstruction amount. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Draw cards equal to the target's current Deconstruction amount + 1. NL Deal !D! damage."
   },
-  "velKoz:Take3": {
-    "NAME": "Take 3",
-    "DESCRIPTION": "3"
+  "velKoz:ZhenDangLianJi": {
+    "NAME": "Zhen Dang Lian Ji",
+    "DESCRIPTION": "Deal !D! damage. For each stack of Deconstruction, deal !D! damage again."
   },
-  "velKoz:Take4": {
-    "NAME": "Take 4",
-    "DESCRIPTION": "4"
+  "velKoz:XuNengBaoPo": {
+    "NAME": "Xu Neng Bao Po",
+    "DESCRIPTION": "Deal !D! damage. NL If it causes Organic Deconstruction to explode, gain !B! Block."
+  },
+  "velKoz:AnatomicalMastery": {
+    "NAME": "Anatomical Mastery",
+    "DESCRIPTION": "Organic Deconstruction explodes when stacking to 2."
+  },
+  "velKoz:DualDeconstrucion": {
+    "NAME": "Dual Deconstrucion",
+    "DESCRIPTION": "Each time you attack, apply 2 stacks of Deconstruction."
   }
 }

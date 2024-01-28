@@ -40,8 +40,8 @@ public class VoidInsightRelic extends CustomRelic {
                 new ApplyPowerAction(
                         AbstractDungeon.player, // 应用能力的对象，这里是玩家
                         AbstractDungeon.player, // 能力的来源，也是玩家
-                        new OrganicDeconstructionPower(AbstractDungeon.player, AbstractDungeon.player, 15, 1, 3), // 创建一个新的能力实例
-                        15 // 要添加的能力层数
+                        new OrganicDeconstructionPower(AbstractDungeon.player, AbstractDungeon.player, 6, 1, 3), // 创建一个新的能力实例
+                        6 // 要添加的能力层数
                 )
         );
         for(AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters){

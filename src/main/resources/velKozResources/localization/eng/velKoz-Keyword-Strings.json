@@ -21,10 +21,8 @@
     "PROPER_NAME": "Organic Deconstruction",
     "NAMES": [
       "Organic Deconstruction",
-      "Organic Deconstructions",
-      "organic_deconstruction",
-      "organic_deconstructions"
+      "OrganicDeconstruction"
     ],
-    "DESCRIPTION": "Whenever you apply an attack, apply 1 stack of Deconstruction to the target. After reaching 3 stacks, clear all of them and deal damage equal to the stack amount of the power."
+    "DESCRIPTION": "When the stack amount of \"Deconstrucion\" reaches the limit, deal damage equal to the stack amount of \"Organic Deconstruction\"."
   }
 ]

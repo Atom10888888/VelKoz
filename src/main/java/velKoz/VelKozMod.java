@@ -515,6 +515,10 @@ public class VelKozMod implements
         
         if (keywords != null) {
             for (Keyword keyword : keywords) {
+                logger.info("Keyword Loading...");
+                logger.info(keyword.PROPER_NAME);
+                logger.info(keyword.NAMES);
+                logger.info(keyword.DESCRIPTION);
                 BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
                 //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
             }
