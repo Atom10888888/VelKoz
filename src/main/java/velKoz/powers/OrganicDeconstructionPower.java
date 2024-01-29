@@ -68,18 +68,14 @@ public class OrganicDeconstructionPower extends AbstractPower implements Cloneab
         return this.stacksToAdd;
     }
 
+    public int getExplodeDamage(){ return this.amount;}
+
     public void onAnatomicalMasteryPowerApplied(){
         this.stacksLimit = 2;
     }
 
-    public void onDualDeconstrucionPowerApplied(){
+    public void onDualDeconstructionPowerApplied(){
         this.stacksToAdd = 2;
-    }
-
-    @Override
-    public void atEndOfRound(){
-        this.stacksLimit = 3;
-        this.stacksToAdd = 1;
     }
 
 

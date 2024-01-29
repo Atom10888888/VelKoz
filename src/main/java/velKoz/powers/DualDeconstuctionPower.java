@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import velKoz.VelKozMod;
+import velKoz.util.PowerHandler;
 import velKoz.util.TextureLoader;
 
 import static velKoz.VelKozMod.makePowerPath;
@@ -48,10 +49,9 @@ public class DualDeconstuctionPower extends AbstractPower implements CloneablePo
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        for (AbstractPower power : owner.powers){
-            if (power instanceof OrganicDeconstructionPower){
-                ((OrganicDeconstructionPower) power).onDualDeconstrucionPowerApplied();
-            }
+        AbstractPower organicDeconstructionPower = PowerHandler.findPower(owner, OrganicDeconstructionPower.class);
+        if (organicDeconstructionPower != null){
+            ((OrganicDeconstructionPower) organicDeconstructionPower).onDualDeconstructionPowerApplied();
         }
 
         updateDescription();

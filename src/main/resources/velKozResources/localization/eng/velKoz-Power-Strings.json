@@ -35,6 +35,11 @@
                 "DESCRIPTIONS": [
                         "Each time you attack, apply 2 stacks of Deconstruction."
                 ]
-
+        },
+        "velKoz:PlasmaFissionPower": {
+                "NAME": "Plasma Fission",
+                "DESCRIPTIONS": [
+                        "This turn, all \"strike\"s are split into two separate hits, one maintaining the original damage, and the other dealing half of the original damage."
+                ]
         }
 }

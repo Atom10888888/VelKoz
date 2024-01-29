@@ -154,14 +154,14 @@ public class VelKoz extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(EnergyExtract.ID);
-        retVal.add(EnergyExtract.ID);
+        retVal.add(Strike_Grey.ID);
+        retVal.add(Strike_Grey.ID);
         retVal.add(VoidRift.ID);
         retVal.add(VoidRift.ID);
         retVal.add(ZhenDangLianJi.ID);
         retVal.add(ZhenDangLianJi.ID);
-        retVal.add(XuNengBaoPo.ID);
-        retVal.add(XuNengBaoPo.ID);
+        retVal.add(PlasmaFission.ID);
+        retVal.add(PlasmaFission.ID);
         retVal.add(AnatomicalMastery.ID);
         retVal.add(DualDeconstrucion.ID);
 

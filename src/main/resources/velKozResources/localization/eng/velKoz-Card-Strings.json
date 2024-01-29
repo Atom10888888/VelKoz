@@ -82,5 +82,13 @@
   "velKoz:DualDeconstrucion": {
     "NAME": "Dual Deconstrucion",
     "DESCRIPTION": "Each time you attack, apply 2 stacks of Deconstruction."
+  },
+  "velKoz:PlasmaFission": {
+    "NAME": "Plasma Fission",
+    "DESCRIPTION": "This turn, all \"strike\"s are split into two separate hits, one maintaining the original damage, and the other dealing half of the original damage."
+  },
+  "velKoz:TectonicDisruption": {
+    "NAME": "Tectonic Disruption",
+    "DESCRIPTION": "Apply !M! Deconstruction and !velKoz:SecondMagic! Weak to an enemy."
   }
 }
