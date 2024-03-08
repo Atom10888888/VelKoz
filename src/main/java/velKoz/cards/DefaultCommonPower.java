@@ -1,5 +1,6 @@
 package velKoz.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,6 +12,8 @@ import velKoz.powers.CommonPower;
 
 import static velKoz.VelKozMod.makePowerCardPath;
 
+
+@AutoAdd.Ignore
 public class DefaultCommonPower extends AbstractDynamicCard {
 
     /*

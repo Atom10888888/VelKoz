@@ -51,11 +51,11 @@
     "DESCRIPTION": "Channel 1 Default Orb."
   },
   "velKoz:Strike_Grey": {
-    "NAME": "Strike_Grey",
+    "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
   "velKoz:Defend_Grey": {
-    "NAME": "Defend_Grey",
+    "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
   "velKoz:VoidRift": {
@@ -64,24 +64,24 @@
   },
   "velKoz:EnergyExtract": {
     "NAME": "Energy Extract",
-    "DESCRIPTION": "Draw cards equal to the target's current Deconstruction amount. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Draw cards equal to the target's current Deconstruction amount + 1. NL Deal !D! damage."
+    "DESCRIPTION": "Draw cards equal to the target's current velkoz:Deconstructions amount. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Draw cards equal to the target's current velkoz:Deconstructions amount + 1. NL Deal !D! damage."
   },
   "velKoz:ZhenDangLianJi": {
     "NAME": "Zhen Dang Lian Ji",
-    "DESCRIPTION": "Deal !D! damage. For each stack of Deconstruction, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. For each stack of velkoz:Deconstructions, deal !D! damage again."
   },
   "velKoz:XuNengBaoPo": {
     "NAME": "Xu Neng Bao Po",
-    "DESCRIPTION": "Deal !D! damage. NL If it causes Organic Deconstruction to explode, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL If it causes velkoz:Organic_Deconstruction to explode, gain !B! Block."
   },
   "velKoz:AnatomicalMastery": {
     "NAME": "Anatomical Mastery",
-    "DESCRIPTION": "Organic Deconstruction explodes when stacking to 2."
+    "DESCRIPTION": "velkoz:Organic_Deconstruction explodes when stacking to 2."
   },
   "velKoz:DualDeconstrucion": {
     "NAME": "Dual Deconstrucion",
-    "DESCRIPTION": "Each time you attack, apply 2 stacks of Deconstruction."
+    "DESCRIPTION": "Your attack apply 1 more stack of velkoz:Deconstructions."
   },
   "velKoz:PlasmaFission": {
     "NAME": "Plasma Fission",
@@ -89,6 +89,18 @@
   },
   "velKoz:TectonicDisruption": {
     "NAME": "Tectonic Disruption",
-    "DESCRIPTION": "Apply !M! Deconstruction and !velKoz:SecondMagic! Weak to an enemy."
+    "DESCRIPTION": "Apply !M! velkoz:Deconstructions and !velKoz:SecondMagic! Weak to an enemy."
+  },
+  "velKoz:VoidBarrier": {
+    "NAME": "Void Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! velkoz:Organic_Deconstruction."
+  },
+  "velKoz:Decay": {
+    "NAME": "Decay",
+    "DESCRIPTION": "Remove all the strength, dexterity and block from an enemy."
+  },
+  "velKoz:FragmentedLearning": {
+    "NAME": "Fragmented Learning",
+    "DESCRIPTION": "Whenever velkoz:Organic_Deconstruction deals damage, gain !M! velkoz:Organic_Deconstruction."
   }
 }

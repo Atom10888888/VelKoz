@@ -6,9 +6,11 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import velKoz.VelKozMod;
 import velKoz.powers.DeconstructionPower;
 import velKoz.powers.OrganicDeconstructionPower;
+import velKoz.util.PowerHandler;
 import velKoz.util.TextureLoader;
 
 import static velKoz.VelKozMod.makeRelicOutlinePath;
@@ -46,6 +48,7 @@ public class VoidInsightRelic extends CustomRelic {
         );
         for(AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters){
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new DeconstructionPower(mo, AbstractDungeon.player, 0),0));
+
         }
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }

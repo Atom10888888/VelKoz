@@ -1,65 +1,62 @@
 package velKoz.cards;
 
-import basemod.AutoAdd;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import velKoz.VelKozMod;
 
 import static velKoz.VelKozMod.makeSkillCardPath;
-@AutoAdd.Ignore
-public class DefaultCommonSkill extends AbstractDynamicCard {
 
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Defend Gain 5 (8) block.
-     */
-
+public class Decay extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = VelKozMod.makeID(DefaultCommonSkill.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(Decay.class.getSimpleName());
     public static final String IMG = makeSkillCardPath("Skill.png");
+    // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
+
 
     // /TEXT DECLARATION/
 
 
-    // STAT DECLARATION 	
+    // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = velKoz.characters.VelKoz.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
-
+    private static final int UPGRADED_COST = 0;
 
     // /STAT DECLARATION/
 
 
-    public DefaultCommonSkill() {
+    public Decay() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
-
-        this.tags.add(CardTags.STARTER_DEFEND); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
+        this.exhaust = true;
     }
+
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        addToBot(new RemoveSpecificPowerAction(m, p, "strength"));
+        addToBot(new RemoveSpecificPowerAction(m, p, "dexterity"));
+        addToBot(new RemoveAllBlockAction(m, p));
     }
 
-    //Upgraded stats.
+
+    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

@@ -13,9 +13,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import velKoz.VelKozMod;
+import velKoz.util.PowerHandler;
 import velKoz.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static velKoz.VelKozMod.makePowerPath;
 
@@ -55,19 +59,29 @@ public class DeconstructionPower extends AbstractPower implements CloneablePower
         description = DESCRIPTIONS[0];
     }
 
+    private List<DeconstructionExplodeListener> listeners = new ArrayList<>();
+
+    public void addDeconstructionExplodeListener(DeconstructionExplodeListener listener) {
+        listeners.add(listener);
+    }
+
+    private void notifyDeconstructionExplode() {
+        for (DeconstructionExplodeListener listener : listeners) {
+            listener.onDeconstructionExplode(this.owner);
+        }
+    }
+
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         AbstractPlayer p = AbstractDungeon.player;
         if (info.owner != null && info.owner.isPlayer && info.type == DamageInfo.DamageType.NORMAL) {
-            for (AbstractPower power : p.powers){
-                if (power instanceof OrganicDeconstructionPower){
-                    OrganicDeconstructionPower organicDeconstructionPower = (OrganicDeconstructionPower)power;
-                    int stacksToAdd = organicDeconstructionPower.getStacksToAdd();
-                    int stacksLimit = organicDeconstructionPower.getStacksLimit();
-                    int explodeDamage = organicDeconstructionPower.amount;
-                    for (int i = 0; i < stacksToAdd; i++) {
-                        addStack(stacksLimit,explodeDamage,p);
-                    }
+            AbstractPower organicDeconstructionPower = PowerHandler.findPower(p,OrganicDeconstructionPower.class);
+            if (organicDeconstructionPower != null){
+                int stacksToAdd = ((OrganicDeconstructionPower)organicDeconstructionPower).getStacksToAdd();
+                int stacksLimit = ((OrganicDeconstructionPower)organicDeconstructionPower).getStacksLimit();
+                int explodeDamage = organicDeconstructionPower.amount;
+                for (int i = 0; i < stacksToAdd; i++) {
+                    addStack(stacksLimit,explodeDamage,p);
                 }
             }
         }
@@ -83,6 +97,7 @@ public class DeconstructionPower extends AbstractPower implements CloneablePower
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(this.owner, new DamageInfo(p, explodeDamage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.FIRE)
             );
+            notifyDeconstructionExplode();
         }
     }
 

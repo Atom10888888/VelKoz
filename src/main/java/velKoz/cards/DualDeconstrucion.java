@@ -35,7 +35,6 @@ public class DualDeconstrucion extends AbstractDynamicCard {
     private static final int COST = 3;
 //    private static final int UPGRADED_COST = 2;
     private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
 
     // /STAT DECLARATION/
 
@@ -58,9 +57,8 @@ public class DualDeconstrucion extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
 //            upgradeBaseCost(UPGRADED_COST);
-//          升级时加上固有
+            //固有
             initializeDescription();
         }
     }

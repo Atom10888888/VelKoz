@@ -24,6 +24,7 @@ import velKoz.cards.*;
 import velKoz.events.IdentityCrisisEvent;
 import velKoz.potions.PlaceholderPotion;
 import velKoz.relics.BottledPlaceholderRelic;
+import velKoz.relics.DefaultClickableRelic;
 import velKoz.relics.VoidInsightRelic;
 import velKoz.util.IDCheckDontTouchPls;
 import velKoz.util.TextureLoader;
@@ -403,7 +404,6 @@ public class VelKozMod implements
 //        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), velKoz.characters.VelKoz.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
-//        BaseMod.addRelic(new TheEyeOfTheVoidRelic(), RelicType.SHARED);
         
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
@@ -516,9 +516,6 @@ public class VelKozMod implements
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 logger.info("Keyword Loading...");
-                logger.info(keyword.PROPER_NAME);
-                logger.info(keyword.NAMES);
-                logger.info(keyword.DESCRIPTION);
                 BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
                 //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
             }

@@ -1,27 +1,22 @@
 package velKoz.cards;
 
-import basemod.AutoAdd;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import velKoz.VelKozMod;
-import velKoz.actions.UncommonPowerAction;
+import velKoz.powers.FragmentedLearningPower;
 
 import static velKoz.VelKozMod.makePowerCardPath;
-@AutoAdd.Ignore
-public class DefaultUncommonPower extends AbstractDynamicCard {
 
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Weirdness Apply X (+1) keywords to yourself.
-     */
+public class FragmentedLearning extends AbstractDynamicCard {
+
 
     // TEXT DECLARATION 
 
-    public static final String ID = VelKozMod.makeID(DefaultUncommonPower.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(FragmentedLearning.class.getSimpleName());
     public static final String IMG = makePowerCardPath("Power.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -29,30 +24,32 @@ public class DefaultUncommonPower extends AbstractDynamicCard {
 
     // /TEXT DECLARATION/
 
+
     // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = velKoz.characters.VelKoz.Enums.COLOR_GRAY;
 
-    private static final int COST = -1;
-    private static final int MAGIC = 1;
+    private static final int COST = 2;
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_PLUS_MAGIC = 1;
 
     // /STAT DECLARATION/
 
-    public DefaultUncommonPower() {
 
+    public FragmentedLearning() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
-
     }
-    
+
+
     // Actions the card should do.
     @Override
-    public void use(final AbstractPlayer p, final AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new UncommonPowerAction(p, m, magicNumber,
-                upgraded, damageTypeForTurn, freeToPlayOnce, energyOnUse));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new FragmentedLearningPower(p, p, magicNumber), magicNumber));
     }
 
     //Upgraded stats.
@@ -60,7 +57,7 @@ public class DefaultUncommonPower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             initializeDescription();
         }
     }

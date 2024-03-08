@@ -1,5 +1,6 @@
 package velKoz.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +12,8 @@ import velKoz.VelKozMod;
 
 import static velKoz.VelKozMod.makeAttackCardPath;
 
+
+@AutoAdd.Ignore
 public class DefaultAttackWithVariable extends AbstractDynamicCard {
 
     /*

@@ -1,6 +1,7 @@
 package velKoz.characters;
 
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpineAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -23,6 +24,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import velKoz.VelKozMod;
 import velKoz.cards.*;
+import velKoz.relics.DefaultClickableRelic;
 import velKoz.relics.VoidInsightRelic;
 
 import java.util.ArrayList;
@@ -100,8 +102,8 @@ public class VelKoz extends CustomPlayer {
     public VelKoz(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "velKozResources/images/char/defaultCharacter/orb/vfx.png", null,
-                new SpriterAnimation(
-                        "velKozResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                new SpineAnimation(THE_DEFAULT_SKELETON_ATLAS,THE_DEFAULT_SKELETON_JSON,1f
+                        ));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -159,8 +161,7 @@ public class VelKoz extends CustomPlayer {
         retVal.add(VoidRift.ID);
         retVal.add(VoidRift.ID);
         retVal.add(ZhenDangLianJi.ID);
-        retVal.add(ZhenDangLianJi.ID);
-        retVal.add(PlasmaFission.ID);
+        retVal.add(VoidBarrier.ID);
         retVal.add(PlasmaFission.ID);
         retVal.add(AnatomicalMastery.ID);
         retVal.add(DualDeconstrucion.ID);

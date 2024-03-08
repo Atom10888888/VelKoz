@@ -27,19 +27,25 @@
         "velKoz:AnatomicalMasteryPower": {
                 "NAME": "Anatomical Mastery",
                 "DESCRIPTIONS": [
-                        "Organic Deconstruction explodes when stacking to 2."
+                        "#yOrganic #yDeconstruction explodes when stacking to 2."
                 ]
         },
         "velKoz:DualDeconstructionPower": {
                 "NAME": "Dual Deconstruction",
                 "DESCRIPTIONS": [
-                        "Each time you attack, apply 2 stacks of Deconstruction."
+                        "Your attack applies 1 more stack of #yDeconstruction."
                 ]
         },
         "velKoz:PlasmaFissionPower": {
                 "NAME": "Plasma Fission",
                 "DESCRIPTIONS": [
                         "This turn, all \"strike\"s are split into two separate hits, one maintaining the original damage, and the other dealing half of the original damage."
+                ]
+        },
+        "velKoz:FragmentedLearningPower": {
+                "NAME": "Fragmented Learning",
+                "DESCRIPTIONS": [
+                        "Whenever #yOrganic #yDeconstruction deals damage, gain #yOrganic #yDeconstruction."
                 ]
         }
 }

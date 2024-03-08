@@ -1,57 +1,61 @@
 package velKoz.cards;
 
-import basemod.AutoAdd;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import velKoz.VelKozMod;
+import velKoz.powers.CommonPower;
+import velKoz.powers.OrganicDeconstructionPower;
 
 import static velKoz.VelKozMod.makeSkillCardPath;
-@AutoAdd.Ignore
-public class DefaultUncommonSkill extends AbstractDynamicCard {
 
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * A Better Defend Gain 1 Plated Armor. Affected by Dexterity.
-     */
+public class VoidBarrier extends AbstractDynamicCard {
 
-    // TEXT DECLARATION 
+    // TEXT DECLARATION
 
-    public static final String ID = VelKozMod.makeID(DefaultUncommonSkill.class.getSimpleName());
+    public static final String ID = VelKozMod.makeID(VoidBarrier.class.getSimpleName());
     public static final String IMG = makeSkillCardPath("Skill.png");
+    // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
+
 
     // /TEXT DECLARATION/
 
-    // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    // STAT DECLARATION
+
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = velKoz.characters.VelKoz.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADE_REDUCED_COST = 0;
 
-    private static final int BLOCK = 1;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int BLOCK = 6;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
+
+    private static final int OD_STACKS = 3;
+    private static final int UPGRADE_PLUS_OD_STACKS=1;
 
     // /STAT DECLARATION/
 
 
-    public DefaultUncommonSkill() {
+    public VoidBarrier() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = OD_STACKS;
     }
+
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new PlatedArmorPower(p, block), block));
+        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new ApplyPowerAction(p, p, new OrganicDeconstructionPower(p, p, magicNumber,1,3), magicNumber));
     }
+
 
     // Upgraded stats.
     @Override
@@ -59,7 +63,7 @@ public class DefaultUncommonSkill extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeBaseCost(UPGRADE_REDUCED_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_OD_STACKS);
             initializeDescription();
         }
     }

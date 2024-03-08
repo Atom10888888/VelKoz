@@ -1,5 +1,7 @@
 package velKoz.cards;
 
+
+import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -22,6 +24,8 @@ import static velKoz.VelKozMod.makeAttackCardPath;
 // Abstract Dynamic Card builds up on Abstract Default Card even more and makes it so that you don't need to add
 // the NAME and the DESCRIPTION into your card - it'll get it automatically. Of course, this functionality could have easily
 // Been added to the default card rather than creating a new Dynamic one, but was done so to deliberately to showcase custom cards/inheritance a bit more.
+
+@AutoAdd.Ignore
 public class DefaultCommonAttack extends CustomCard {
 
     /*

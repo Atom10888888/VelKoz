@@ -1,5 +1,6 @@
 package velKoz.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,7 +11,7 @@ import velKoz.VelKozMod;
 import velKoz.orbs.DefaultOrb;
 
 import static velKoz.VelKozMod.makeSkillCardPath;
-
+@AutoAdd.Ignore
 public class OrbSkill extends AbstractDynamicCard {
 
     /*

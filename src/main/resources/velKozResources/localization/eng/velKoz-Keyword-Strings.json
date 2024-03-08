@@ -18,11 +18,21 @@
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
   },
   {
+    "NAMES": [
+      "deconstruction",
+      "deconstructions"
+    ],
+    "DESCRIPTION": "When the Deconstruction's stack amount reaches the limit, it explodes and deals damage."
+  },
+  {
     "PROPER_NAME": "Organic Deconstruction",
     "NAMES": [
       "Organic Deconstruction",
-      "OrganicDeconstruction"
+      "organic_deconstruction",
+      "organic_deconstructions",
+      "organicdeconstruction",
+      "organicdeconstructions"
     ],
-    "DESCRIPTION": "When the stack amount of \"Deconstrucion\" reaches the limit, deal damage equal to the stack amount of \"Organic Deconstruction\"."
+    "DESCRIPTION": "When the stack amount of Deconstruction reaches the limit, deal damage equal to the stack amount of Organic Deconstruction."
   }
 ]
